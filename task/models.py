@@ -10,16 +10,16 @@ from django.db import models
 
 class Task(models.Model):
     # ID - Primary key é criada automaticamente pelo django
-    # STATUS = [
-    #     ('pendente'),
-    #     ('em andamento'),
-    #     ('concluída'),
-    # ]
+    STATUS = [
+        ('pendente', 'Pendente'),
+        ('em andamento', 'Em andamento'),
+        ('concluída', 'Concluída'),
+    ]
     
     title = models.CharField(max_length=60)
     description = models.TextField(blank=True) # blank=True -- Pode deixar sem preencher
     deadline_date = models.DateField() # N SEI SE É ASSIM
-    # status = models.CharField(max_length=1, choices=STATUS) # N SEI SE É ASSIM
+    status = models.CharField(max_length=13, choices=STATUS, default='pendente') # N SEI SE É ASSIM
     
     def __str__(self):
         return f'{self.title}'

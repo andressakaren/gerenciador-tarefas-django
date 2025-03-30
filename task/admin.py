@@ -3,7 +3,7 @@ from task import models
 
 @admin.register(models.Task)
 class taskAdmin(admin.ModelAdmin):
-    list_display = 'id','title', 'deadline_date', 'description',
+    list_display = 'id','title', 'status', 'deadline_date', 'description',
     ordering = '-id',
     # list_filter - pra ver por status 
     search_fields = 'title', #colocar o usuario
