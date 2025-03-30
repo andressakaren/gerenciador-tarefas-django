@@ -9,4 +9,4 @@ class taskAdmin(admin.ModelAdmin):
     search_fields = 'title', #colocar o usuario
     list_per_page = 10
     list_max_show_all = 100
-    list_editable = 'title', 'deadline_date',
+    list_editable = 'title', 'deadline_date', 'status',
