@@ -151,3 +151,22 @@
 - Criar uma pasta de views pra organizar as views, de fato vao ter muitas view e para organizar em uma pasta só, pode 'burlar' o django para ele usar uma package views e ler o init primeiro para importar tudo da nova view criada.
 
 - IMPORTANTE: Não esquecer de importar tudo do arquivo dentro do init
+
+
+- index.html criado o bloco e usando css ja existente. 
+- atualizar a view pra rendereizar um novo contexto 
+def index(request):
+    
+    tasks = Task.objects.all()
+    
+    context = {
+        'tasks': tasks,
+    }
+    
+    return render(
+        request,
+        'task/index.html',
+        context,
+    )
+
+- 
