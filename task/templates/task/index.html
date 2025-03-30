@@ -1,1 +1,47 @@
 {% extends 'global/base.html' %}    
+
+{% block content %}
+    <div class="responsive">
+        <table class="contacts-table">
+            <caption class='table-caption'>
+                Gerenciador de Tarefas
+            </caption>
+
+            <thead>
+                <tr class="table-row table-row-header">
+                    <th class="table-header">ID</th>
+                    <th class="table-header">Tarefa</th>
+                    <th class="table-header">Status</th>
+                    <th class="table-header">Prazo</th>
+                    <th class="table-header">Atribuido para</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for task in tasks %}
+                    <tr class="table-row">
+                        <td class="table-cel">
+                            <a href="#" class="table-link">
+                                {{task.id}}
+                            </a>
+                        </td>
+                        <td class="table-cel">
+                            {{task.title}}
+                        </td>
+                        <td class="table-cel">
+                            {{task.status}}
+                        </td>
+                        <td class="table-cel">
+                            {{task.deadline_date}}
+                        </td>
+                        <td class="table-cel">
+                            {{task.assigned_by}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock content %}
