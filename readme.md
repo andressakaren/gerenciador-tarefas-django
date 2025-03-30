@@ -145,3 +145,9 @@
 
 <!-- ###  -->
 <!-- pendencias - campo datefield no models.py -->
+
+### Criar pasta de views
+
+- Criar uma pasta de views pra organizar as views, de fato vao ter muitas view e para organizar em uma pasta só, pode 'burlar' o django para ele usar uma package views e ler o init primeiro para importar tudo da nova view criada.
+
+- IMPORTANTE: Não esquecer de importar tudo do arquivo dentro do init
