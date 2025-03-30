@@ -113,3 +113,21 @@
         ```
 
 - python manage.py createsuperuser
+
+### Criar models
+
+- task/models.py
+- importante configurar (settings.py) para caso usar informações do models como campas de data.
+
+    LANGUAGE_CODE = 'pt-br'
+    TIME_ZONE = 'America/Sao_Paulo'
+
+- Realizar as migrações
+        ```
+        python manage.py makemigrations
+        python manage.py migrate
+        ```
+
+### Registrar models criados na area administrativa
+
+
