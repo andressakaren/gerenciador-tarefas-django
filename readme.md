@@ -127,7 +127,7 @@
         python manage.py makemigrations
         python manage.py migrate
         ```
-- Configurar o metodo __str__ para personalizar a saída de com um nome mais legivel na admin do djanho. Se não definir, o Django usará um nome genérico (Task object (id)).
+- Configurar o metodo __str__ para personalizar a saída de com um nome mais legivel na admin do django. Se não definir, o Django usará um nome genérico (Task object (id)).
         ```
         def __str__(self):
             return f'{self.title}'
@@ -144,3 +144,4 @@
         ```
 
 <!-- ###  -->
+<!-- pendencias - campo datefield no models.py -->

@@ -1,11 +1,5 @@
 from django.db import models
 
-# Usuários
-# nome e e-mail únicos.
-
-# Tarefas
-# título, descrição, data de vencimento e status (pendente, em andamento, concluída).
-
 # Filtros por usuário, status e data de vencimento.
 
 class CustomUser(models.Model):
