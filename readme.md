@@ -152,25 +152,24 @@
 
 - IMPORTANTE: Não esquecer de importar tudo do arquivo dentro do init
 
-------------------------------------------------
+### Atualizar a view para enviar dados dinâmicos
 
-- index.html criado o bloco e usando css ja existente. 
-- atualizar a view pra rendereizar um novo contexto 
-def index(request):
-    
-    tasks = Task.objects.all()
-    
-    context = {
-        'tasks': tasks,
-    }
-    
-    return render(
-        request,
-        'task/index.html',
-        context,
-    )
+- render(request, template_name, context=None)
+- Usar contextos criando dicionarios para enviar dados de forma dinamica para nossos templates. Podendo ser acessado através da chave criada no dicionário.
+        ```
+        def index(request):
 
-- 
+            tasks = Task.objects.all()
+            
+            context = {
+                'tasks': tasks,
+            }
+            
+            return render(
+                request,
+                'task/index.html',
+                context,
+            )
+        ```
 
-metodo get() - encontra precisamente um unico valor
-melhor get object or 404
+- usar metodos do objects de acordo a necessidade. O get() encontra precisamente um único valor e requer um parametro, nesse caso, o id. Caso não existente, emitir erro 404.
