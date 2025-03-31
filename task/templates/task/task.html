@@ -1,0 +1,18 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+    <div class="single-contact">
+        <h1 class="single-contact-name">
+            TAREFA: {{task.title}}
+        </h1>
+    </div>
+
+    <p><b>ID:</b> {{task.id}}</p>
+    <p><b>Tarefa:</b> {{task.title}}</p>
+    <p><b>Status:</b> {{task.status}}</p>
+    <p><b>Prazo:</b> {{task.deadline_date}}</p>
+    <p><b>Descrição:</b> {{task.description}}</p>
+    <p><b>Criado por:</b> {{task.created_by.name}}</p>
+    <p><b>Atribuído à:</b> {{task.assigned_to.name}}</p>
+    
+{% endblock content %}

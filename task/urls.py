@@ -4,5 +4,6 @@ from task import views
 app_name = 'task'
 
 urlpatterns = [
+    path('<int:task_id>/', views.task, name='task'),
     path('', views.index, name='index'),
 ]

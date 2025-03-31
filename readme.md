@@ -152,6 +152,7 @@
 
 - IMPORTANTE: Não esquecer de importar tudo do arquivo dentro do init
 
+------------------------------------------------
 
 - index.html criado o bloco e usando css ja existente. 
 - atualizar a view pra rendereizar um novo contexto 
@@ -170,3 +171,6 @@ def index(request):
     )
 
 - 
+
+metodo get() - encontra precisamente um unico valor
+melhor get object or 404
