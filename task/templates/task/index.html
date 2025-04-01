@@ -13,6 +13,7 @@
                     <th class="table-header">Tarefa</th>
                     <th class="table-header">Status</th>
                     <th class="table-header">Prazo</th>
+                    <th class="table-header">Criado por</th>
                     <th class="table-header">Atribuido para</th>
                 </tr>
             </thead>
@@ -33,6 +34,9 @@
                         </td>
                         <td class="table-cel">
                             {{task.deadline_date}}
+                        </td>
+                        <td class="table-cel">                        
+                        {{task.created_by}}
                         </td>
                         <td class="table-cel">                        
                         {{task.assigned_to}}

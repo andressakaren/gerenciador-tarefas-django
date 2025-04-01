@@ -11,10 +11,3 @@ class taskAdmin(admin.ModelAdmin):
     list_max_show_all = 100
     list_editable = 'title', 'deadline_date', 'status',
     
-@admin.register(models.CustomUser)
-class CustomUserAdmin(admin.ModelAdmin):
-    list_display = 'id', 'name', 'email',
-    ordering = 'id',
-    list_per_page = 10
-    list_max_show_all = 100
-    list_editable =  'name',
